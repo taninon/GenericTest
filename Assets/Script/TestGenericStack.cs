@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestGenericStack<T> : MonoBehaviour
+public class TestGenericStack<T>
 {
 	private int stackIndex = 0;
 	private T[] stackArray;
