@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class TestGenericWhereRecordList<T> where T : IRecordKey, IRecordName
+public class TestGenericWhereRecordList<T> where T : class, IRecordKey, IRecordName
 {
 	private List<T> recordParams;
 
@@ -20,11 +20,27 @@ public class TestGenericWhereRecordList<T> where T : IRecordKey, IRecordName
 
 	public T GetRecord(int key)
 	{
-		return recordParams.Where(r => r.Key == key).FirstOrDefault();
+		foreach (T record in recordParams)
+		{
+			if (record.Key == key)
+			{
+				return record;
+			}
+		}
+
+		return null;
 	}
 
 	public T GetRecord(string name)
 	{
-		return recordParams.Where(r => r.Name == name).FirstOrDefault();
+		foreach (T record in recordParams)
+		{
+			if (record.Name == name)
+			{
+				return record;
+			}
+		}
+
+		return null;
 	}
 }
