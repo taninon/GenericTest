@@ -15,5 +15,4 @@ public class UseTestNonGenericStack : MonoBehaviour
 		Debug.Log(stack.Pop());
 		Debug.Log(stack.Pop());
 	}
-
 }
