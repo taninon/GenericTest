@@ -14,7 +14,7 @@ public class CharacterRecord : IRecordKey, IRecordName
 	public CharacterRecord(int key, string name, string talk)
 	{
 		_key = key;
-		name = _name;
+		_name = name;
 		_talk = talk;
 	}
 
