@@ -12,7 +12,7 @@ public class MonsterRecord : IRecordKey, IRecordName
 	public MonsterRecord(int key, string name)
 	{
 		_key = key;
-		name = _name;
+		_name = name;
 	}
 
 	public void Shout()
